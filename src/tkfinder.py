@@ -1,12 +1,24 @@
 # -*- coding: utf-8 -*-
 import json
 import os
+
+from random import randrange
 from difflib import SequenceMatcher
 from heapq import nlargest as _nlargest
 
 from src.resources import const
 
 base_path = os.path.dirname(__file__)
+
+def generate_character_list(howMany):
+    chara_misc_json = load_characters_config()
+    chara_misc_json.pop()
+    tempList = []
+    for x in range (0, int(howMany)):
+        tempVal = randrange(len(chara_misc_json))
+        tempList.append(chara_misc_json[tempVal]["name"])
+        del chara_misc_json[tempVal]
+    return tempList
 
 
 def load_characters_config():

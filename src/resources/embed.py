@@ -4,6 +4,14 @@ import re
 
 MOVE_NOT_FOUND_TITLE = 'Move not found'
 
+def character_randomized_embed(characters, player):
+    text = ""
+    for character in characters:
+        text = text + characters + "\n"
+    embed = discord.Embed(title="Characters for " + player, description = text)
+    return embed
+
+
 def move_embed(character, move):
     """Returns the embed message for character and move"""
     embed = discord.Embed(title=character['proper_name'],

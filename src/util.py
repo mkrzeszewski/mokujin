@@ -4,6 +4,10 @@ from src import tkfinder
 from src.resources import const, embed
 from discord_components import Button, ActionRow
 
+def display_randomized_characters(characters, player):
+    result = {}
+    result["embed"] = embed.character_randomized_embed(characters, player)
+    return result
 
 def get_character_name_from_content(content):
     first_line = content[0]

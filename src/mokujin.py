@@ -89,7 +89,20 @@ async def on_message(message):
         if author_name in const.BLACKLIST or author_id in const.ID_BLACKLIST:
             return
         else:
-            if message.content == '!server-list':
+            if message.content.startswith('!random'):
+                howMany = message.content.split(' ', 1)[1]
+                await channel.send("preparing to random "+howMany+" characters for " + author_name)
+                character_list = (tkfinder.generate_character_list(howMany))
+                # inc = 0
+                # for character in charList:
+                #     inc = inc + 1
+                #     await channel.send("[" + str(inc) + "] - " + character)
+                await channel.send(embed=embed.character_randomized_embed(character_list, author_name))
+
+            elif message.content == '!maliniak':
+                await channel.send("maliniak to noob")
+
+            elif message.content == '!server-list':
                 serverlist = list(map(lambda x: x.name, bot.guilds))
 
                 serverlist.sort()
