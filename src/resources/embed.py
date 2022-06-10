@@ -6,9 +6,11 @@ MOVE_NOT_FOUND_TITLE = 'Move not found'
 
 def character_randomized_embed(characters, player):
     text = ""
+    print("hej - in embed!")
     for character in characters:
         text = text + characters + "\n"
     embed = discord.Embed(title="Characters for " + player, description = text)
+    print("hej - exiting embed!")
     return embed
 
 

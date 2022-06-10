@@ -5,8 +5,10 @@ from src.resources import const, embed
 from discord_components import Button, ActionRow
 
 def display_randomized_characters(characters, player):
+    print("hej - in utils!")
     result = {}
     result["embed"] = embed.character_randomized_embed(characters, player)
+    print("hej - exiting utils!")
     return result
 
 def get_character_name_from_content(content):
