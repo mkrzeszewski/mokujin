@@ -16,7 +16,7 @@ def generate_character_list(howMany):
     tempList = []
     for x in range (0, int(howMany)):
         tempVal = randrange(len(chara_misc_json))
-        tempList.append(chara_misc_json[tempVal]["name"])
+        tempList.append(chara_misc_json[tempVal])
         del chara_misc_json[tempVal]
     return tempList
 

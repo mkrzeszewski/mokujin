@@ -97,7 +97,6 @@ async def on_message(message):
                 # for character in charList:
                 #     inc = inc + 1
                 #     await channel.send("[" + str(inc) + "] - " + character)
-                print("hej!")
                 result = util.display_randomized_characters(character_list, author_name)
                 await channel.send(embed=result["embed"])
                 
