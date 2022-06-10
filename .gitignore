@@ -21,3 +21,4 @@ venv
 /src/tools/add_moves.py
 /src/tools/get_all_strings.py
 src/test.py
+src/resources/config.json
