@@ -97,7 +97,8 @@ async def on_message(message):
                 # for character in charList:
                 #     inc = inc + 1
                 #     await channel.send("[" + str(inc) + "] - " + character)
-                await channel.send(embed=embed.character_randomized_embed(character_list, author_name))
+                result = util.display_randomized_characters(character_list, author_name)
+                await channel.send(embed=result["embed"])
 
             elif message.content == '!maliniak':
                 await channel.send("maliniak to noob")
