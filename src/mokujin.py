@@ -99,8 +99,7 @@ async def on_message(message):
                 #     await channel.send("[" + str(inc) + "] - " + character)
                 result = ""
                 
-                if author_name == "Rolab#8465":
-                    print("Maliniak!")
+                if author_name == "Raspbe#5712":
                     character_list = (tkfinder.generate_jack7_list(howMany))
                 else:
                     character_list = (tkfinder.generate_character_list(howMany))
