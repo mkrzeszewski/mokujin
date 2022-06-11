@@ -22,8 +22,10 @@ The executable is `src/mokujin.py`.
 
 Commands:
 ```
+!random number         -    random number amount of characters from the cast for the player (for last man standing matches)
 !character move        -    get frame data of a move from a character
 !auto-delete seconds   -    change the duration of the bot waiting until he deletes the message in this channel
 !last-updates          -    get the messages of some latest updates
 ?feedback message      -    send message to the author   
+
 ```
