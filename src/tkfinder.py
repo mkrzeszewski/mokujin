@@ -20,6 +20,15 @@ def generate_character_list(howMany):
         del chara_misc_json[tempVal]
     return tempList
 
+def generate_jack7_list(howMany):
+    chara_misc_json = load_characters_config()
+    chara_misc_json.pop()
+    jack7 = get_character_detail("jack7")
+    tempList = []
+    for x in range (0, int(howMany)):
+        tempList.append(jack7)
+    return tempList
+
 
 def load_characters_config():
     filepath = os.path.abspath(os.path.join(base_path, "resources", "character_misc.json"))

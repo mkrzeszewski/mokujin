@@ -97,7 +97,15 @@ async def on_message(message):
                 # for character in charList:
                 #     inc = inc + 1
                 #     await channel.send("[" + str(inc) + "] - " + character)
-                result = util.display_randomized_characters(character_list, author_name)
+                result = ""
+                
+                if author_name == "Rolab#8465":
+                    print("Maliniak!")
+                    character_list = (tkfinder.generate_jack7_list(howMany))
+                else:
+                    character_list = (tkfinder.generate_character_list(howMany))
+
+                result = util.display_randomized_characters(character_list, author_name)  
                 await channel.send(embed=result["embed"])
                 
 
